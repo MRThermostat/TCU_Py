@@ -9,12 +9,16 @@ void loop(){
   int incomingByte = 0;
   byte i;
   char a[100];
-  if (Serial.available() > 0) {
+  if(Serial.available() > 0) {
     for(i = 0; i < 100; i++){
       incomingByte = Serial.read();
+      if(incomingByte == 38) { //Checks for '&'
+        a[i] = 0;
+        break;
+      }
       a[i] = incomingByte;
     }
-    Serial.print("I got: "); // ASCII printable characters
-    Serial.println(a);
+    Serial.print("I got: ");
+    Serial.print(a);
   }
 }
