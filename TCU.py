@@ -43,11 +43,13 @@ while 0:
     print("Arduino:\n %s\n" % ser.readline())
 
 #Trying to parse json
-info = json.loads('{\r\n\t"fan":"on",\r\n\t"system":"heat",\r\n\t"profileList":[\r\n\t\t{\r\n\t\t\t"active":0,\r\n\t\t\t"profileRulesList":[\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":70,\r\n\t\t\t\t\t"start_condition":1400,\r\n\t\t\t\t\t"end_condition":2300,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Weekend"\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":66,\r\n\t\t\t\t\t"start_condition":300,\r\n\t\t\t\t\t"end_condition":500,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Weekend"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t"name":"Weekend"\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"profileRulesList":[\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":66,\r\n\t\t\t\t\t"start_condition":100,\r\n\t\t\t\t\t"end_condition":700,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Work Week"\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":72,\r\n\t\t\t\t\t"start_condition":800,\r\n\t\t\t\t\t"end_condition":1400,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Work Week"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t"name":"Work Week"\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":0,\r\n\t\t\t"profileRulesList":[\r\n\t\t\t],\r\n\t\t\t"name":"Vacation"\r\n\t\t}\r\n\t],\r\n\t"sensorList":[\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Porch",\r\n\t\t\t"temperature":55\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Basement",\r\n\t\t\t"temperature":65\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":0,\r\n\t\t\t"name":"Porch",\r\n\t\t\t"temperature":80\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Bedroom",\r\n\t\t\t"temperature":55\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Foyer",\r\n\t\t\t"temperature":50\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Kitchen",\r\n\t\t\t"temperature":50\r\n\t\t}\r\n\t]\r\n}')
+info = json.loads('{\r\n\t"fan":"on",\r\n\t"system":"heat",\r\n\t"profileList":[\r\n\t\t{\r\n\t\t\t"active":0,\r\n\t\t\t"profileRulesList":[\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":70,\r\n\t\t\t\t\t"start_condition":1400,\r\n\t\t\t\t\t"end_condition":2300,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Weekend"\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":66,\r\n\t\t\t\t\t"start_condition":300,\r\n\t\t\t\t\t"end_condition":500,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Weekend"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t"name":"Weekend"\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"profileRulesList":[\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":66,\r\n\t\t\t\t\t"start_condition":100,\r\n\t\t\t\t\t"end_condition":700,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Work Week"\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":72,\r\n\t\t\t\t\t"start_condition":800,\r\n\t\t\t\t\t"end_condition":1400,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Work Week"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t"name":"Work Week"\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":0,\r\n\t\t\t"profileRulesList":[\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":70,\r\n\t\t\t\t\t"start_condition":1400,\r\n\t\t\t\t\t"end_condition":2300,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Vacation"\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\t"setting":66,\r\n\t\t\t\t\t"start_condition":300,\r\n\t\t\t\t\t"end_condition":500,\r\n\t\t\t\t\t"type":"Time",\r\n\t\t\t\t\t"Profile_Name":"Vacation"\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t"name":"Vacation"\r\n\t\t}\r\n\t],\r\n\t"sensorList":[\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Porch",\r\n\t\t\t"temperature":55\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Basement",\r\n\t\t\t"temperature":65\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":0,\r\n\t\t\t"name":"Porch",\r\n\t\t\t"temperature":80\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Bedroom",\r\n\t\t\t"temperature":55\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Foyer",\r\n\t\t\t"temperature":50\r\n\t\t},\r\n\t\t{\r\n\t\t\t"active":1,\r\n\t\t\t"name":"Kitchen",\r\n\t\t\t"temperature":50\r\n\t\t}\r\n\t]\r\n}')
 json_info = json.dumps(info)
 decoded_info = json.loads(json_info)
 
 profileList = ', '.join(map(str, decoded_info["profileList"]))
+sensorList = ', '.join(map(str, decoded_info["sensorList"]))
+
 profileRulesList = ast.literal_eval(profileList)
 profileCount = 0
 for rules in profileRulesList:
@@ -67,7 +69,18 @@ for rules in profileRulesList:
         print("\t\tStart Conditions: %d" % conds["start_condition"])
         print("\t\tEnd Conditions: %d" % conds["end_condition"])
         print("\t\tSettings: %d" % conds["start_condition"])
-        print("\t\tProfile Name: %d" % conds["start_condition"])
-        print("\t\tType: %d" % conds["start_condition"])
+        print("\t\tProfile Name: %s" % conds["Profile_Name"])
+        print("\t\tType: %s" % conds["type"])
     
-sensorList = ', '.join(map(str, decoded_info["sensorList"]))    
+sensorInfoList = ast.literal_eval(sensorList)
+sensorCount = 0
+for sensors in sensorInfoList:
+    sensorCount += 1
+    print("Sensor %d:" % sensorCount)
+    print("\tName: %s" % sensors["name"])
+    print("\tTemperature: %d" % sensors["temperature"])
+    if sensors["active"]:
+        print("\tActive: True")
+    else:
+        print("\tActive: False")
+    
