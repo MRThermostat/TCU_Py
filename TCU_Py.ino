@@ -7,18 +7,12 @@ while(!Serial);
 
 void loop(){
   int incomingByte = 0;
-  byte i;
-  char a[100];
-  if(Serial.available() > 0) {
-    for(i = 0; i < 100; i++){
-      incomingByte = Serial.read();
-      if(incomingByte == 38) { //Checks for '&'
-        a[i] = 0;
-        break;
-      }
-      a[i] = incomingByte;
-    }
-    Serial.print("I got: ");
-    Serial.print(a);
+  char a[1200];
+  for(int i = 0; i < 1200; i++){
+    incomingByte = Serial.read();
+    a[i] = incomingByte;
   }
+  Serial.print("Arduino: ");
+  Serial.println(a);
+  while(1){};
 }

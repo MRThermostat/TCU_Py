@@ -120,7 +120,7 @@ void loop(void)
   uint8_t buffer[200] = {
     0  };
   uint8_t mux_id;
-  uint32_t len = wifi.recv(&mux_id, buffer, sizeof(buffer), 200);
+  uint32_t len = wifi.recv(&mux_id, buffer, sizeof(buffer), 10000);
   //Serial.println("created vars");
   if (len > 0) {
     Serial.print("Status:[");
