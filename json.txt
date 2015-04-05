@@ -1,7 +1,7 @@
 _FOLD ORIGINAL
 {
-	“fan”:”on”,
-	“system”:”heat”,
+	"fan":"on",
+	"system":"heat",
 	"profileList":[
 		{
 			"active":0,

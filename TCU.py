@@ -109,7 +109,7 @@ if CREATEJSON:
     active_s,name_s,temperature = 1,"Porch",55 #Sensor structure
     fan,system = "on","heat" #HVAC structure
     ruleCount = 2
-    sensorCount = 5
+    sensorCount = 6
     profileCount = 3
     profileList = []
     sensorList = []
